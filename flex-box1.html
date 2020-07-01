@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        div{
+            border: solid 5px rgb(135, 135, 207);
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        .big {
+            font-size: 1.5em;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column; /*main axis, padrão seria row, ou seja horizontal*/
+            flex-direction: row;
+            flex-wrap: wrap; /*quebra a linha para não dar overflow*/
+            flex-flow: row wrap; /*junta o flex-direction com o flex-wrap*/
+            width: 150px;
+            justify-content: flex-start; /*justifica o conteudo de acordo com o start do flex*/
+            justify-content: flex-end; /*justifica o conteudo de acordo com o end do flex*/
+            justify-content: center;
+            justify-content: space-around; /*centraliza distribuindo usando os espaços*/
+            justify-content: space-between; /* centraliza com espaços porem somente entre os elementos*/
+            
+            /* cross axis */
+            align-items: stretch; /* padrao do cross axis*/
+            align-items: center;
+
+            /*para mais de uma linha do cross axis*/
+            align-content: center;
+        }
+    </style>
+</head>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div class="big">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+</body>
+</html>
